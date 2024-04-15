@@ -1,8 +1,10 @@
 #pragma once
 #include "IResponsePattern.h"
+#include "BaseInterface.h"
 #include "Core/ZmqDD.h"
 #include "../Events/Event.h"
 #include <thread>
+#include <atomic>
 
 namespace Aurora::DDWork::Network
 {
@@ -10,6 +12,9 @@ namespace Aurora::DDWork::Network
 	{
 	public:
 		ResponsePattern(std::string adress);
+		~ResponsePattern();
+
+		void Release() override;
 
 		void SendString(std::string message) override;
 		std::string ReceiveString() override;
@@ -20,7 +25,11 @@ namespace Aurora::DDWork::Network
 		Events::Event<bool> m_UserLoginedEvent;
 
 		std::jthread m_ReceivingThread;
+		std::atomic_bool m_IsThreadRequired;
 
 		void ReceivingThread();
+		AnswerMessageBase ContinueByRequestType(RequestMessageBase requestMess);
+		AnswerMessageBase TryLoginUser(BaseRequestHeaderMess requestHead);
+		const AnswerMessageBase LoginedNewUser();
 	};
 }

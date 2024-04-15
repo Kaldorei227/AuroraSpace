@@ -1,29 +1,20 @@
+#include "stdafx.h"
 #include <iostream>
-#include "DDWork/Network/ResponsePattern.h" //TODO: Vymazat
-#include "DDWork/Events/EventGuard.h"
-#include "DDWork/Events/IEventGuard.h"
-#include "DDWork/Events/Event.h"
-#include "DDWork/Events/IEvent.h"
 
-struct CustomS
-{
-    double ID;
-};
+using namespace Aurora::DDWork::Network;
 
 int main()
 {
     std::cout << "Hello World!\n";
 
-    CustomS ah{};
-    Aurora::DDWork::Events::Event<CustomS> myEvent;
+    ResponsePattern m_Client("tcp://*:5555");
 
-    myEvent(ah);
-
-    Aurora::DDWork::Events::EventGuard<CustomS> guard;
-
-    guard.Register(myEvent, [](CustomS aa) {});
-
-    std::cout << "DONE" << std::endl;
+    std::cout << "Connection created" << std::endl;
     int i;
     std::cin >> i;
+    std::cout << "Connection releasing" << std::endl;
+
+    m_Client.Release();
+    std::cout << "Connection closed" << std::endl;
+
 }

@@ -14,7 +14,7 @@ namespace AuroraApplication
             loginView.Show();
             loginView.IsVisibleChanged += (s, ev) =>
             {
-                if (loginView.IsVisible == false && loginView.IsLoaded)
+                if (loginView.IsLoaded)
                 {
                     var mainWindow = new MainWindow();
                     mainWindow.Show();

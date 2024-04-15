@@ -9,6 +9,8 @@ namespace Aurora::DDWork::Network
 	public:
 		~IResponsePattern() = default;
 
+		virtual void Release() = 0;
+
 		virtual void SendString(std::string message) = 0;
 		virtual std::string ReceiveString() = 0;
 

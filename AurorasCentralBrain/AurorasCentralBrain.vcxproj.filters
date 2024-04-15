@@ -25,6 +25,9 @@
     <Filter Include="DDWork\Events">
       <UniqueIdentifier>{46081be3-7c9e-4245-80bb-8789b37abb18}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DDWork\Json">
+      <UniqueIdentifier>{61306145-2dd5-4d65-bc05-4479a9a7c74f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AurorasCentralBrain.cpp">
@@ -38,6 +41,9 @@
     </ClCompile>
     <ClCompile Include="DDWork\Network\ResponsePattern.cpp">
       <Filter>DDWork\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="DDWork\Json\JsonManager.cpp">
+      <Filter>DDWork\Json</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +76,12 @@
     </ClInclude>
     <ClInclude Include="DDWork\Network\BaseInterface.h">
       <Filter>DDWork\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DDWork\Json\JsonManager.h">
+      <Filter>DDWork\Json</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

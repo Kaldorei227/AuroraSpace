@@ -90,6 +90,7 @@ copy Sdk\Release\libzmq.pdb $(OutDir)</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AurorasCentralBrain.cpp" />
+    <ClCompile Include="DDWork\Json\JsonManager.cpp" />
     <ClCompile Include="DDWork\Network\Core\ZmqDD.cpp" />
     <ClCompile Include="DDWork\Network\RequestPattern.cpp" />
     <ClCompile Include="DDWork\Network\ResponsePattern.cpp" />
@@ -99,12 +100,14 @@ copy Sdk\Release\libzmq.pdb $(OutDir)</Command>
     <ClInclude Include="DDWork\Events\EventGuard.h" />
     <ClInclude Include="DDWork\Events\IEvent.h" />
     <ClInclude Include="DDWork\Events\IEventGuard.h" />
+    <ClInclude Include="DDWork\Json\JsonManager.h" />
     <ClInclude Include="DDWork\Network\BaseInterface.h" />
     <ClInclude Include="DDWork\Network\Core\PetternType.h" />
     <ClInclude Include="DDWork\Network\Core\ZmqDD.h" />
     <ClInclude Include="DDWork\Network\IResponsePattern.h" />
     <ClInclude Include="DDWork\Network\RequestPattern.h" />
     <ClInclude Include="DDWork\Network\ResponsePattern.h" />
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

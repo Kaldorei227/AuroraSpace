@@ -12,6 +12,8 @@ namespace Aurora::DDWork::Network::Core
 		ZmqDD(std::string stringAddres, PetternType type);
 		~ZmqDD();
 
+		void ReleaseConnection();
+
 		void SendFrame(std::string message, int flags);
 		std::string ReceiveFrame(int flags);
 

@@ -15,11 +15,7 @@ namespace Aurora::DDWork::Network::Core
 
 	ZmqDD::~ZmqDD()
 	{
-		int rc = zmq_close(*m_ZmqSocket);
-		assert(rc == 0);
-
-		rc = zmq_ctx_term(*m_ZmqContext);
-		assert(rc == 0);
+		ReleaseConnection();
 	}
 
 	void ZmqDD::SendFrame(std::string message, int flags)
@@ -55,6 +51,15 @@ namespace Aurora::DDWork::Network::Core
 
 		m_NeedReceiveMessage = false;
 		return result;
+	}
+
+	void ZmqDD::ReleaseConnection()
+	{
+		int rc = zmq_close(*m_ZmqSocket);
+		assert(rc == 0);
+
+		rc = zmq_ctx_term(*m_ZmqContext);
+		assert(rc == 0);
 	}
 
 	std::optional<std::string> ZmqDD::TryReceiveFrame(int flags)
