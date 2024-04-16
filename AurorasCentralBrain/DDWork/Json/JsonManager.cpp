@@ -1,7 +1,7 @@
 #include "JsonManager.h"
 #include "../Network/BaseInterface.h"
 
-namespace Aurora::DDWork::Json
+namespace DDWork::Json
 {
 	template<>
 	Network::RequestMessageBase JsonManager::DeSerialize(std::string string)

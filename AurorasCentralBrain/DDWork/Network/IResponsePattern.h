@@ -2,7 +2,7 @@
 #include <iostream>
 #include "../Events/IEvent.h"
 
-namespace Aurora::DDWork::Network
+namespace DDWork::Network
 {
 	class IResponsePattern
 	{

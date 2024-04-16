@@ -5,7 +5,7 @@
 #include <atomic>
 #include <thread>
 
-namespace Aurora::DDWork::Events
+namespace DDWork::Events
 {
     template<typename T>
     class Event : public IEvent<T>

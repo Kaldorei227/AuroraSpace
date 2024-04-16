@@ -1,7 +1,7 @@
 #pragma once
 #include <exception>
 
-namespace Aurora::DDWork::Network::Core::Exception
+namespace DDWork::Network::Core::Exception
 {
 	class NetworkBaseException : public std::exception
 	{

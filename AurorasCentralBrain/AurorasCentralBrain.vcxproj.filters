@@ -83,5 +83,11 @@
     <ClInclude Include="DDWork\Json\JsonManager.h">
       <Filter>DDWork\Json</Filter>
     </ClInclude>
+    <ClInclude Include="DDWork\Network\ILoginManager.h">
+      <Filter>DDWork\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="DDWork\Network\Common.h">
+      <Filter>DDWork\Network</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

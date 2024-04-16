@@ -2,7 +2,7 @@
 #include <iostream>
 #include "Core/ZmqDD.h"
 
-namespace Aurora::DDWork::Network
+namespace DDWork::Network
 {
 	class RequestPattern
 	{

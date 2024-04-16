@@ -3,7 +3,7 @@
 #include <vector>
 #include "../Core/Exception/Exceptions.h"
 
-namespace Aurora::DDWork::Network::Core
+namespace DDWork::Network::Core
 {
 	ZmqDD::ZmqDD(std::string stringAddres, PetternType type)
 	{

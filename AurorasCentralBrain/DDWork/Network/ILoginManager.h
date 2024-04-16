@@ -2,7 +2,7 @@
 #include <iostream>
 #include "Common.h"
 
-namespace Aurora::DDWork::Network
+namespace DDWork::Network
 {
 	class ILoginManager
 	{

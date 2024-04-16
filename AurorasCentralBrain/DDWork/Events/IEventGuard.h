@@ -2,7 +2,7 @@
 #include "IEvent.h"
 #include <functional>
 
-namespace Aurora::DDWork::Events
+namespace DDWork::Events
 {
 	template<class T>
 	class IEventGuard

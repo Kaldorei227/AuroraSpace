@@ -1,6 +1,6 @@
 #include "RequestPattern.h"
 
-namespace Aurora::DDWork::Network
+namespace DDWork::Network
 {
 	RequestPattern::RequestPattern(std::string adress) :
 		m_NeedReceiveMessage{ false }

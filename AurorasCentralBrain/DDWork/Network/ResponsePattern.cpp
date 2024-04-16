@@ -1,7 +1,7 @@
 #include "ResponsePattern.h"
 #include "../Json/JsonManager.h"
 
-namespace Aurora::DDWork::Network
+namespace DDWork::Network
 {
 	ResponsePattern::ResponsePattern(std::string adress, ILoginManager& loginManager_)
 		: m_LoginManager(loginManager_)

@@ -102,8 +102,10 @@ copy Sdk\Release\libzmq.pdb $(OutDir)</Command>
     <ClInclude Include="DDWork\Events\IEventGuard.h" />
     <ClInclude Include="DDWork\Json\JsonManager.h" />
     <ClInclude Include="DDWork\Network\BaseInterface.h" />
+    <ClInclude Include="DDWork\Network\Common.h" />
     <ClInclude Include="DDWork\Network\Core\PetternType.h" />
     <ClInclude Include="DDWork\Network\Core\ZmqDD.h" />
+    <ClInclude Include="DDWork\Network\ILoginManager.h" />
     <ClInclude Include="DDWork\Network\IResponsePattern.h" />
     <ClInclude Include="DDWork\Network\RequestPattern.h" />
     <ClInclude Include="DDWork\Network\ResponsePattern.h" />

@@ -2,7 +2,7 @@
 #include "IEventGuard.h"
 #include <iostream>
 
-namespace Aurora::DDWork::Events
+namespace DDWork::Events
 {
 	template<typename T>
 	class EventGuard : public IEventGuard<T>

@@ -1,7 +1,7 @@
 #pragma once
 #include <functional>
 
-namespace Aurora::DDWork::Events
+namespace DDWork::Events
 {
 	template<class T>
 	class IEvent

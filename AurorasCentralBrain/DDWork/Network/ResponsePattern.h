@@ -7,7 +7,7 @@
 #include <thread>
 #include <atomic>
 
-namespace Aurora::DDWork::Network
+namespace DDWork::Network
 {
 	class ResponsePattern : public IResponsePattern
 	{

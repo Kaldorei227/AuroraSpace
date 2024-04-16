@@ -1,6 +1,6 @@
 #pragma once
 
-namespace Aurora::DDWork::Network::Core
+namespace DDWork::Network::Core
 {
 	enum class PetternType
 	{

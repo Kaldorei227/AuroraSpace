@@ -4,7 +4,7 @@
 #include <zmq.h>
 #include "PetternType.h"
 
-namespace Aurora::DDWork::Network::Core
+namespace DDWork::Network::Core
 {
 	class ZmqDD
 	{

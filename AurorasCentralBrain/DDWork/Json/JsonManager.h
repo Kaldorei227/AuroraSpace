@@ -2,7 +2,7 @@
 #include <iostream>
 #include "json.hpp"
 
-namespace Aurora::DDWork::Json
+namespace DDWork::Json
 {
 	class JsonManager
 	{

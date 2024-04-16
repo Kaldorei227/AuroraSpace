@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-namespace Aurora::DDWork::Network
+namespace DDWork::Network
 {
     enum class BaseMessType
     {

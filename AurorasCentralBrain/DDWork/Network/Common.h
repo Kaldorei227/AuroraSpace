@@ -1,6 +1,6 @@
 #pragma once
 
-namespace Aurora::DDWork::Network
+namespace DDWork::Network
 {
 	enum class UserRightType
 	{
