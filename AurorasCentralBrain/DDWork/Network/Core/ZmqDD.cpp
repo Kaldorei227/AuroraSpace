@@ -1,6 +1,7 @@
 #include "ZmqDD.h"
 #include <assert.h>
 #include <vector>
+#include "../Core/Exception/Exceptions.h"
 
 namespace Aurora::DDWork::Network::Core
 {
@@ -21,7 +22,7 @@ namespace Aurora::DDWork::Network::Core
 	void ZmqDD::SendFrame(std::string message, int flags)
 	{
 		if (m_NeedReceiveMessage)
-			throw std::runtime_error("ZmqDD need receive message before!"); //TODO: Vytvorit vlastni exeptions
+			throw Exception::ReceiveMessageRequired("ZmqDD need receive message before!");
 
 		auto msgLenght = message.length();
 		auto* msg = String2CharArray(message);
@@ -35,7 +36,7 @@ namespace Aurora::DDWork::Network::Core
 	std::string ZmqDD::ReceiveFrame(int flags)
 	{
 		if (!m_NeedReceiveMessage)
-			throw std::runtime_error("ZmqDD need send message before!");
+			throw Exception::SendMessageRequired("ZmqDD need send message before!");
 
 		zmq_msg_t msg;
 		int rc = zmq_msg_init(&msg);
@@ -85,7 +86,7 @@ namespace Aurora::DDWork::Network::Core
 	bool ZmqDD::TrySendFrame(std::string message, int flags)
 	{
 		if (m_NeedReceiveMessage)
-			throw std::runtime_error("ZmqDD need receive message before!");
+			throw Exception::ReceiveMessageRequired("ZmqDD need receive message before!");
 
 		auto msgLenght = message.length();
 		auto* msg = String2CharArray(message);

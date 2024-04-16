@@ -9,7 +9,7 @@ namespace AuroraApplication.Network
 
         public BridgeConnection()
         {
-            _Server = new ServerConnection();
+            _Server = new ServerConnection("localhost", "5555");
         }
 
         public bool Login(string username, string password)

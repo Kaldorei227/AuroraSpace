@@ -7,9 +7,9 @@
     {
         private RequestSocket server;
 
-        public ServerConnection()
+        public ServerConnection(string ip, string port)
         {
-            server = new RequestSocket(">tcp://localhost:5555");
+            server = new RequestSocket($">tcp://{ip}:{port}");
         }
 
         public bool Login(string username, string password)
