@@ -1,5 +1,6 @@
 #pragma once
 #include "IResponsePattern.h"
+#include "ILoginManager.h"
 #include "BaseInterface.h"
 #include "Core/ZmqDD.h"
 #include "../Events/Event.h"
@@ -11,7 +12,7 @@ namespace Aurora::DDWork::Network
 	class ResponsePattern : public IResponsePattern
 	{
 	public:
-		ResponsePattern(std::string adress);
+		ResponsePattern(std::string adress, ILoginManager& loginManager_);
 		~ResponsePattern();
 
 		void Release() override;
@@ -21,6 +22,7 @@ namespace Aurora::DDWork::Network
 
 		Events::IEvent<bool>& GetUserLogined() override;
 	private:
+		ILoginManager& m_LoginManager;
 		std::unique_ptr<Core::ZmqDD> m_Client;
 		Events::Event<bool> m_UserLoginedEvent;
 
@@ -30,6 +32,6 @@ namespace Aurora::DDWork::Network
 		void ReceivingThread();
 		AnswerMessageBase ContinueByRequestType(RequestMessageBase requestMess);
 		AnswerMessageBase TryLoginUser(BaseRequestHeaderMess requestHead);
-		const AnswerMessageBase LoginedNewUser();
+		AnswerMessageBase LoginedNewUser();
 	};
 }

@@ -3,8 +3,9 @@
 
 namespace Aurora::DDWork::Network
 {
-	ResponsePattern::ResponsePattern(std::string adress)
-		: m_IsThreadRequired(true)
+	ResponsePattern::ResponsePattern(std::string adress, ILoginManager& loginManager_)
+		: m_LoginManager(loginManager_)
+		, m_IsThreadRequired(true)
 	{
 		m_Client = std::make_unique<Core::ZmqDD>(adress, Core::PetternType::ResponsePattern);
 		m_ReceivingThread = std::jthread([&] 
@@ -55,9 +56,18 @@ namespace Aurora::DDWork::Network
 	AnswerMessageBase ResponsePattern::ContinueByRequestType(RequestMessageBase requestMess)
 	{
 		std::cout << "We got request: " << requestMess.Head.Username << std::endl;
-		//TODO: Create Switch case
-		if (requestMess.Head.Type == BaseMessType::Login)
+
+		switch(requestMess.Head.Type)
+		{
+		case BaseMessType::Login:
 			return TryLoginUser(requestMess.Head);
+		case BaseMessType::HardBit:
+			break;
+		case BaseMessType::Logger:
+			break;
+		case BaseMessType::Other:
+			break;
+		}
 
 		return AnswerMessageBase
 		{
@@ -69,10 +79,7 @@ namespace Aurora::DDWork::Network
 
 	AnswerMessageBase ResponsePattern::TryLoginUser(BaseRequestHeaderMess requestHead)
 	{
-		auto user = "Kaldorei";
-		auto pass = "Heslo";
-
-		if (user == requestHead.Username && pass == requestHead.Password)
+		if (m_LoginManager.IsUserAllowed(requestHead.Username, requestHead.Password) == UserRightType::Allowed)
 			return LoginedNewUser();
 
 		return AnswerMessageBase
@@ -83,7 +90,7 @@ namespace Aurora::DDWork::Network
 		};
 	}
 
-	const AnswerMessageBase ResponsePattern::LoginedNewUser()
+	AnswerMessageBase ResponsePattern::LoginedNewUser()
 	{
 		return AnswerMessageBase
 		{
