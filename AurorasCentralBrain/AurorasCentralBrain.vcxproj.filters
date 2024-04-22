@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="DDWork">
+      <UniqueIdentifier>{841e9258-85e5-427e-a923-a83e9075a327}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DDWork\Network">
+      <UniqueIdentifier>{ced00049-2bf0-4ee0-ba29-09b5e8b7b152}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DDWork\Network\Core">
+      <UniqueIdentifier>{1a6a9e63-d8ad-4994-88d2-bde344d80ac2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DDWork\Events">
+      <UniqueIdentifier>{46081be3-7c9e-4245-80bb-8789b37abb18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DDWork\Json">
+      <UniqueIdentifier>{61306145-2dd5-4d65-bc05-4479a9a7c74f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Aurora">
+      <UniqueIdentifier>{267e67a5-7a2f-4048-a5ef-bf7f8b85b3ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Aurora\Config">
+      <UniqueIdentifier>{189c91d5-aad7-46c8-8ed8-682c341d7040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Aurora\Logger">
+      <UniqueIdentifier>{6c22d7fd-a1a2-4748-a97c-5b8152c70344}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Aurora\ConsoleUI">
+      <UniqueIdentifier>{431450ed-09f9-49a6-9726-8b3eec39d7a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Aurora\Impl">
+      <UniqueIdentifier>{67b349b8-ba1e-4171-b92b-9c39c9879006}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AurorasCentralBrain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DDWork\Network\Core\ZmqDD.cpp">
+      <Filter>DDWork\Network\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DDWork\Network\RequestPattern.cpp">
+      <Filter>DDWork\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="DDWork\Network\ResponsePattern.cpp">
+      <Filter>DDWork\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="DDWork\Json\JsonManager.cpp">
+      <Filter>DDWork\Json</Filter>
+    </ClCompile>
+    <ClCompile Include="AurorasMainLauncher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Aurora\BaseAurorasObject.cpp">
+      <Filter>Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="Aurora\Logger\BaseLogManager.cpp">
+      <Filter>Aurora\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="Aurora\Impl\AuroraCommunicatio.cpp">
+      <Filter>Aurora\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="Aurora\Impl\SimpleLoginManager.cpp">
+      <Filter>Aurora\Impl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DDWork\Network\Core\ZmqDD.h">
+      <Filter>DDWork\Network\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DDWork\Network\Core\PetternType.h">
+      <Filter>DDWork\Network\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DDWork\Network\RequestPattern.h">
+      <Filter>DDWork\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="DDWork\Network\ResponsePattern.h">
+      <Filter>DDWork\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="DDWork\Events\Event.h">
+      <Filter>DDWork\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="DDWork\Events\EventGuard.h">
+      <Filter>DDWork\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="DDWork\Events\IEvent.h">
+      <Filter>DDWork\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="DDWork\Events\IEventGuard.h">
+      <Filter>DDWork\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="DDWork\Network\IResponsePattern.h">
+      <Filter>DDWork\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="DDWork\Network\BaseInterface.h">
+      <Filter>DDWork\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DDWork\Json\JsonManager.h">
+      <Filter>DDWork\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="DDWork\Network\ILoginManager.h">
+      <Filter>DDWork\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="DDWork\Network\Common.h">
+      <Filter>DDWork\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="AurorasMainLauncher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Aurora\BaseAurorasObject.h">
+      <Filter>Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="Aurora\Logger\BaseLogManager.h">
+      <Filter>Aurora\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="Aurora\Logger\IBaseLogManager.h">
+      <Filter>Aurora\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="Aurora\Impl\AuroraCommunicatio.h">
+      <Filter>Aurora\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="Aurora\Impl\SimpleLoginManager.h">
+      <Filter>Aurora\Impl</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
