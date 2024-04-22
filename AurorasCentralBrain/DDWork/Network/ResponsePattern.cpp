@@ -55,7 +55,7 @@ namespace DDWork::Network
 
 	AnswerMessageBase ResponsePattern::ContinueByRequestType(RequestMessageBase requestMess)
 	{
-		std::cout << "We got request: " << requestMess.Head.Username << std::endl;
+		std::cout << "We got request: " << requestMess.Head.Username << std::endl; // TODO::Delete
 
 		switch(requestMess.Head.Type)
 		{

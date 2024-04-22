@@ -90,12 +90,23 @@ copy Sdk\Release\libzmq.pdb $(OutDir)</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AurorasCentralBrain.cpp" />
+    <ClCompile Include="AurorasMainLauncher.cpp" />
+    <ClCompile Include="Aurora\BaseAurorasObject.cpp" />
+    <ClCompile Include="Aurora\Impl\AuroraCommunicatio.cpp" />
+    <ClCompile Include="Aurora\Impl\SimpleLoginManager.cpp" />
+    <ClCompile Include="Aurora\Logger\BaseLogManager.cpp" />
     <ClCompile Include="DDWork\Json\JsonManager.cpp" />
     <ClCompile Include="DDWork\Network\Core\ZmqDD.cpp" />
     <ClCompile Include="DDWork\Network\RequestPattern.cpp" />
     <ClCompile Include="DDWork\Network\ResponsePattern.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AurorasMainLauncher.h" />
+    <ClInclude Include="Aurora\BaseAurorasObject.h" />
+    <ClInclude Include="Aurora\Impl\AuroraCommunicatio.h" />
+    <ClInclude Include="Aurora\Impl\SimpleLoginManager.h" />
+    <ClInclude Include="Aurora\Logger\BaseLogManager.h" />
+    <ClInclude Include="Aurora\Logger\IBaseLogManager.h" />
     <ClInclude Include="DDWork\Events\Event.h" />
     <ClInclude Include="DDWork\Events\EventGuard.h" />
     <ClInclude Include="DDWork\Events\IEvent.h" />
